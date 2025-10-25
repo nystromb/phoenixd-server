@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for phoenixd-server on 2025-10-19T00:35:23-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'phoenixd-server'
+primary_region = 'ord'
+
+[build]
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[[mounts]]
+  source = "data"
+  destination = "/data"
